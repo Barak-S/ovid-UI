@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import CovidData from './CovidData'
+import CountryStatFinder from './countryStatFinder'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <body>
+          <h2>Covid-19 Data UI</h2>
+          <CovidData></CovidData>
+          <CountryStatFinder></CountryStatFinder>
+      </body>
     </div>
   );
 }
