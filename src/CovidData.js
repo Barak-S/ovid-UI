@@ -21,18 +21,13 @@ export default class CovidData extends React.Component{
             lastUpdate: data.dt
         }))
     }
-
-    // recoveryRate(){
-    //     let num = this.state.confirmed/this.state.recovered
-    //     return Math.round(100*num)/100
-    // }
     
     render(){
 
         
         return(
             <div>
-                <div class="marquee">
+                <div className="marquee">
                 <div>
                     <span>
                         <strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}

@@ -3,6 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CovidData from './CovidData'
 import CountryStatFinder from './countryStatFinder'
+import News from './News'
+
+import { Container, Col, Row, Image, Card } from 'react-bootstrap';
+
 
 function App() {
   return (
@@ -10,7 +14,12 @@ function App() {
       <body>
           <h2>Covid-19 Data UI</h2>
           <CovidData></CovidData>
-          <CountryStatFinder></CountryStatFinder>
+            <Row>
+                <CountryStatFinder></CountryStatFinder>
+                <News></News>
+            </Row>
+             
+
       </body>
     </div>
   );

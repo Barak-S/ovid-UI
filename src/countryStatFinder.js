@@ -1,7 +1,5 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
-import { ButtonToolbar, DropdownButton, Dropdown, Form } from 'react-bootstrap';
-
 
 export default class CountryStatFinder extends React.Component{
 
@@ -64,7 +62,7 @@ export default class CountryStatFinder extends React.Component{
         return(
             this.state.filteredData.map(c=>{
                 return(
-                    <tr>
+                    <tr key={c.location}>
                         <td>{c.location}</td>
                         <td>{c.confirmed}</td>
                         <td>{c.deaths}</td>
