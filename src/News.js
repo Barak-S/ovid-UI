@@ -9,9 +9,7 @@ export default class News extends React.Component{
     }
     
     componentDidMount(){
-        fetch('http://newsapi.org/v2/top-headlines?' +
-        'country=us&' +
-        'apiKey=d2577e63c08c4437bd69a7b1b66d7c7f')
+        fetch('http://newsapi.org/v2/top-headlines?' +'country=us&' +'apiKey=d2577e63c08c4437bd69a7b1b66d7c7f')
         .then(resp=>resp.json())
         .then(data=>this.setState({
             articles: data.articles
