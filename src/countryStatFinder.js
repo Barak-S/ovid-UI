@@ -79,7 +79,7 @@ export default class CountryStatFinder extends React.Component{
             <div style={{ width: '50%' }}>
                 <div style={{ marginLeft: '7%', paddingTop: 44 }}>
 
-                    <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#013C71", fontSize: 19 }} onChange={(e)=>this.handleChange(e)}/>
+                    <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#013C71", fontSize: 16 }} onChange={(e)=>this.handleChange(e)}/>
 
                     <div style={{ paddingTop:8 }}>
                     <Table striped bordered hover>

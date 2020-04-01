@@ -22,17 +22,14 @@ export default class News extends React.Component{
         return(
             this.state.articles.map(a=>{
                 return(
-                    <Card key={a.source.id} style={{ width: '38rem' }}>
+                    <Card key={a.source.id} style={{ width: '38rem', marginBottom: 10.5 }}>
                         <Card.Img variant="top" src={a.urlToImage} style={{padding:15}} />
                         <Card.Body>
                             <Card.Title>{a.title}</Card.Title>
                             <Card.Text>
                                 {a.author}
                             </Card.Text>
-                        </Card.Body>
-
-                        <Card.Body>
-                            <Card.Link href={a.url}>{a.url}</Card.Link>
+                            <Card.Link href="#"onClick={()=> window.open(a.url, "_blank")}>{a.url}</Card.Link>
                         </Card.Body>
                     </Card>
                 )
