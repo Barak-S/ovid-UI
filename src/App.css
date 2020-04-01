@@ -43,9 +43,9 @@ th {
   animation: marquee 12s linear infinite;
 }
 
-.marquee span:hover {
+/* .marquee span:hover {
   animation-play-state: paused
-}
+} */
 
 
 @keyframes marquee {
@@ -56,3 +56,4 @@ th {
     transform: translate(-100%, 0);
   }
 }
+

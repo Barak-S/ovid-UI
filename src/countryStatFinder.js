@@ -1,5 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
+import { Form } from 'react-bootstrap';
+
 
 export default class CountryStatFinder extends React.Component{
 
@@ -25,9 +27,6 @@ export default class CountryStatFinder extends React.Component{
         },()=>this.filterCountries())
     }
 
-    handleSubmit(e){
-        e.preventDefault()
-    }
 
     // handleSubmit(e){
     //     e.preventDefault()
@@ -77,26 +76,27 @@ export default class CountryStatFinder extends React.Component{
     render(){
 
         return(
-            <div>
-                <form style={{margin:44, width:'45%' }} onSubmit={(e)=>this.handleSubmit(e)}>
-                    <input placeholder="Search by Country"onChange={(e)=>this.handleChange(e)}></input>
-                    <input type="submit"/>
-                </form>
-                <div style={{margin:55, width:'45%' }}>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>Country</th>
-                            <th>Confirmed</th>
-                            <th>Deaths</th>
-                            <th>Recovered</th>
-                            <th>Active</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.mapCountries()}
-                    </tbody>
-                </Table>
+            <div style={{ width: '50%' }}>
+                <div style={{ marginLeft: '7%', paddingTop: 44 }}>
+
+                    <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#013C71", fontSize: 19 }} onChange={(e)=>this.handleChange(e)}/>
+
+                    <div style={{ paddingTop:8 }}>
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>Confirmed</th>
+                                <th>Deaths</th>
+                                <th>Recovered</th>
+                                <th>Active</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.mapCountries()}
+                        </tbody>
+                    </Table>
+                    </div>
                 </div>
             </div>
         )

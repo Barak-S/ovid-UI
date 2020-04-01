@@ -28,15 +28,15 @@ export default class CovidData extends React.Component{
         return(
             <div>
                 <div className="marquee">
-                <div>
-                    <span>
-                        <strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}
-                        <strong>Deaths: </strong> {this.state.deaths.toLocaleString()}
-                        <strong>Active: </strong> {this.state.active.toLocaleString()}
-                        <strong>Recovered: </strong> {this.state.recovered.toLocaleString()}
-                        <strong>Last updated: </strong> {this.state.lastUpdate}
-                    </span>
-                </div>
+                    <div>
+                        <span>
+                            <strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}
+                            <strong>Deaths: </strong> {this.state.deaths.toLocaleString()}
+                            <strong>Active: </strong> {this.state.active.toLocaleString()}
+                            <strong>Recovered: </strong> {this.state.recovered.toLocaleString()}
+                            <strong>Last updated: </strong> {this.state.lastUpdate}
+                        </span>
+                    </div>
                 </div>
                 
             </div>
