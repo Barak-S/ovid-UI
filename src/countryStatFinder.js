@@ -1,6 +1,8 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import { Form } from 'react-bootstrap';
+import { Container, Col, Row, Image, Card } from 'react-bootstrap';
+
 
 
 export default class CountryStatFinder extends React.Component{
@@ -17,9 +19,6 @@ export default class CountryStatFinder extends React.Component{
         filteredData: []
     }
 
-    //data.data
-    //data.dt
-    // http://covid2019-api.herokuapp.com/v2/current ===> to make a tale for all countries
 
     handleChange(e){
         this.setState({
@@ -28,19 +27,9 @@ export default class CountryStatFinder extends React.Component{
     }
 
 
-    // handleSubmit(e){
-    //     e.preventDefault()
-    //     fetch(`https://covid2019-api.herokuapp.com/v2/country/${this.state.searchTerm}`)
-    //     .then(resp=>resp.json())
-    //     .then(data=>this.setState({
-    //         location: data.data.location,
-    //         confirmed: data.data.confirmed,
-    //         deaths: data.data.deaths,
-    //         recovered: data.data.recovered,
-    //         active: data.data.active,
-    //         lastUpdate: data.dt
-    //     }))
-    // }
+    handleCountryClick(e){
+        console.log(e)
+    }
 
     componentDidMount(){
         fetch('http://covid2019-api.herokuapp.com/v2/current')
@@ -61,7 +50,7 @@ export default class CountryStatFinder extends React.Component{
         return(
             this.state.filteredData.map(c=>{
                 return(
-                    <tr key={c.location}>
+                    <tr key={c.location} onClick={()=>this.handleCountryClick(c.location)}>
                         <td>{c.location}</td>
                         <td>{c.confirmed}</td>
                         <td>{c.deaths}</td>
@@ -82,20 +71,20 @@ export default class CountryStatFinder extends React.Component{
                     <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#013C71", fontSize: 16 }} onChange={(e)=>this.handleChange(e)}/>
 
                     <div style={{ paddingTop:8 }}>
-                    <Table striped bordered hover>
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>Confirmed</th>
-                                <th>Deaths</th>
-                                <th>Recovered</th>
-                                <th>Active</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.mapCountries()}
-                        </tbody>
-                    </Table>
+                        <Table striped bordered hover>
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Confirmed</th>
+                                    <th>Deaths</th>
+                                    <th>Recovered</th>
+                                    <th>Active</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.mapCountries()}
+                            </tbody>
+                        </Table>
                     </div>
                 </div>
             </div>

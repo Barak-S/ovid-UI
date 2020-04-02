@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CovidData from './CovidData'
 import CountryStatFinder from './CountryStatFinder'
 import News from './News'
 
-import { Container, Col, Row, Image, Card } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 
 function App() {
+
+  const [countryName, setCountryName] = useState('us')
+
+  
   return (
     <div className="App">
       <body>
@@ -16,7 +20,9 @@ function App() {
           <CovidData></CovidData>
             <Row>
                 <CountryStatFinder></CountryStatFinder>
-                <News></News>
+                <News
+                  countryName={countryName}
+                ></News>
             </Row>
              
 
