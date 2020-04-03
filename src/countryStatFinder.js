@@ -1,8 +1,6 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import { Form } from 'react-bootstrap';
-import { Container, Col, Row, Image, Card } from 'react-bootstrap';
-
 
 
 export default class CountryStatFinder extends React.Component{
