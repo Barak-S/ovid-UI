@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CovidData from './CovidData'
-import CountryStatFinder from './CountryStatFinder'
+import CountryStatFinder from './countryStatFinder'
 import News from './News'
 
 import { Row } from 'react-bootstrap';
