@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
 
-
 export default class News extends React.Component{
 
     state={
@@ -9,18 +8,18 @@ export default class News extends React.Component{
     }
     
     componentDidMount(){
-        fetch(`https://newsapi.org/v2/top-headlines?country=${this.props.countryName}&category=health&apiKey=d2577e63c08c4437bd69a7b1b66d7c7f`)
+        fetch(`https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=d2577e63c08c4437bd69a7b1b66d7c7f`)
         .then(resp=>resp.json())
         .then(data=>this.setState({
             articles: data.articles
-        }))
+        },()=>console.log(this.state.articles)))
     }
 
     mapArticles(){
         return(
             this.state.articles.map(a=>{
                 return(
-                    <Card key={a.title} style={{ width: '38rem', marginBottom: 10.5 }}>
+                    <Card key={a.title} style={{ width: '38rem', marginBottom: 10.5, borderColor: "#e95f5f" }}>
                         <Card.Img variant="top" src={a.urlToImage} style={{padding:15}} />
                         <Card.Body>
                             <Card.Title>{a.title}</Card.Title>

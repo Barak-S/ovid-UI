@@ -50,10 +50,10 @@ export default class CountryStatFinder extends React.Component{
                 return(
                     <tr key={c.location} onClick={()=>this.handleCountryClick(c.location)}>
                         <td>{c.location}</td>
-                        <td>{c.confirmed}</td>
-                        <td>{c.deaths}</td>
-                        <td>{c.recovered}</td>
-                        <td>{c.active}</td>
+                        <td>{c.confirmed.toLocaleString()}</td>
+                        <td>{c.deaths.toLocaleString()}</td>
+                        <td>{c.recovered.toLocaleString()}</td>
+                        <td>{c.active.toLocaleString()}</td>
                     </tr>
                 )
             })
@@ -66,7 +66,7 @@ export default class CountryStatFinder extends React.Component{
             <div style={{ width: '50%' }}>
                 <div style={{ marginLeft: '7%', paddingTop: 44 }}>
 
-                    <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#013C71", fontSize: 16 }} onChange={(e)=>this.handleChange(e)}/>
+                    <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#e95f5f", fontSize: 16 }} onChange={(e)=>this.handleChange(e)}/>
 
                     <div style={{ paddingTop:8 }}>
                         <Table striped bordered hover>

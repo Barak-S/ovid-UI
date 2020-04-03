@@ -1,33 +1,40 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CovidData from './CovidData'
-import CountryStatFinder from './countryStatFinder'
+import Nav from './Nav'
+import Contact from './Contact'
+import About from './About'
+import Home from './Home'
 import News from './News'
-
-import { Row } from 'react-bootstrap';
 
 
 function App() {
 
-  const [countryName, setCountryName] = useState('us')
+  // const [countryName, setCountryName] = useState('us')
 
   
   return (
-    <div className="App">
-      <body>
-          <h2>Covid-19 Data UI</h2>
+    <Router>
+      <div className="App">
+        <header >
+          <Nav></Nav>
           <CovidData></CovidData>
-            <Row>
-                <CountryStatFinder></CountryStatFinder>
-                <News
-                  countryName={countryName}
-                ></News>
-            </Row>
-             
-
-      </body>
-    </div>
+        </header>
+        <Switch>
+          <Route exact path = "/"render={(routerProps)=> <Home {...routerProps}/> }/>
+        </Switch>
+        <Switch>
+          <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps}/>}/>
+        </Switch>
+        <Switch>
+          <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/>
+        </Switch>
+  
+      </div>
+    </Router>
   );
 }
 
