@@ -11,7 +11,7 @@ export default class CovidData extends React.Component{
     }
     
     componentDidMount(){
-        fetch('http://covid2019-api.herokuapp.com/v2/total')
+        fetch('https://covid2019-api.herokuapp.com/v2/total')
         .then(resp=>resp.json())
         .then(data => this.setState({
             confirmed: data.data.confirmed,

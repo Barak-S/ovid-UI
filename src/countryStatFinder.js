@@ -30,7 +30,7 @@ export default class CountryStatFinder extends React.Component{
     }
 
     componentDidMount(){
-        fetch('http://covid2019-api.herokuapp.com/v2/current')
+        fetch('https://covid2019-api.herokuapp.com/v2/current')
         .then(resp=>resp.json())
         .then(data=>this.setState({
             countryData: data.data,
