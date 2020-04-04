@@ -6,14 +6,14 @@ import './App.css';
 export default function Contact(){
     return(
         <div className="contact">
-            <Card style={{ margin: "3.25%", }}>
-                <Card.Header style={{color: "#e95f5f", fontSize: 17, paddingBottom: 8, fontWeight: "700", }}>Contact</Card.Header>
+            <Card style={{ margin: "3.25%", borderColor: "#e95f5f" }}>
+                <Card.Header style={{color: "#e95f5f", fontSize: 17, paddingBottom: 8, fontWeight: "700", borderColor: "#000"}}>Contact</Card.Header>
                 <Card.Body>
                     <div>
                         <Container>
                             <Row>
                                 <Col xs={8} md={4}>
-                                <Image src="../headshot.png" thumbnail />
+                                <Image src="../headshot.png" thumbnail style={{borderColor: "#000"}}/>
                                 <Card.Title style={{paddingTop:12, color: "#e95f5f"}}>Barak Saidoff</Card.Title>
                                 <Card.Text style={{color: "#e95f5f", fontWeight: "600", paddingBottom:8.5}}>Full Stack Software Developer</Card.Text>
                                 </Col>
