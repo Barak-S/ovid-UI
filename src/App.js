@@ -22,6 +22,7 @@ function App() {
         <header >
           <Nav></Nav>
           <CovidData></CovidData>
+          <meta name="viewport" content="width=device-width" ></meta>
         </header>
         <Switch>
           <Route exact path = "/"render={(routerProps)=> <Home {...routerProps}/> }/>

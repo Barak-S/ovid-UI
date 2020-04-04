@@ -27,7 +27,7 @@ export default class CovidData extends React.Component{
         
         return(
             <div>
-                <h2>Covid-19 Data UI</h2>
+                <h2 style={{paddingTop:15}}>Covid-19 Data UI</h2>
                 <div className="marquee">
                     <div>
                         <span>
