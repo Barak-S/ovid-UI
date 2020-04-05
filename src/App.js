@@ -24,16 +24,10 @@ function App() {
           <CovidData></CovidData>
         </header>
         <Switch>
-          <Route exact path = "/"render={(routerProps)=> <Home {...routerProps}/> }/>
-        </Switch>
-        <Switch>
-          <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps}/>}/>
-        </Switch>
-        <Switch>
-          <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/>
-        </Switch>
-        <Switch>
-          <Route exact path= "/news" render={(routerProps) => <News {...routerProps}/>}/>
+            <Route exact path = "/"render={(routerProps)=> <Home {...routerProps}/> }/>
+            <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps}/>}/>
+            <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/>
+            <Route exact path= "/news" render={(routerProps) => <News {...routerProps}/>}/>
         </Switch>
   
       </div>

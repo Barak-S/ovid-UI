@@ -24,7 +24,7 @@ export default class Home extends React.Component{
         return(
             <Row>
                 <CountryStatFinder></CountryStatFinder>
-                <News></News>
+                {/* <News></News> */}
             </Row>
         )
 
