@@ -32,9 +32,11 @@ export default class News extends React.Component{
 
                     <Card className="newsCard">
                         <Card.Img variant="top" src={a.urlToImage} style={{ padding:15, marginBottom: 10.5 }} />
-                        <Card.Body>
+                        <Card.Body style={{color: "#fff"}}>
                             <Card.Title>{a.title}</Card.Title>
                             <Card.Text>{a.author}</Card.Text>
+                            <Card.Link href="#"onClick={()=> window.open(a.url, "_blank")}>{a.url}</Card.Link>
+
                         </Card.Body>
                     </Card>
                 )
