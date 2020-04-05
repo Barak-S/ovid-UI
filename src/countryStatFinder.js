@@ -53,7 +53,7 @@ export default class CountryStatFinder extends React.Component{
                         <td style={{color: "#65DD9B"}}>{c.confirmed.toLocaleString()}</td>
                         <td style={{color: "#F65164"}}>{c.deaths.toLocaleString()}</td>
                         <td style={{color: "#449BE2"}}>{c.recovered.toLocaleString()}</td>
-                        <td style={{color: "#fff"}}>{c.active.toLocaleString()}</td>
+                        <td style={{color: "#F8F53F"}}>{c.active.toLocaleString()}</td>
                     </tr>
                 )
             })
