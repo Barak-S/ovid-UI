@@ -50,9 +50,9 @@ export default class CountryStatFinder extends React.Component{
                 return(
                     <tr key={c.location} onClick={()=>this.handleCountryClick(c.location)}>
                         <td style={{color: "#fff"}}>{c.location}</td>
-                        <td style={{color: "#fff"}}>{c.confirmed.toLocaleString()}</td>
-                        <td style={{color: "#fff"}}>{c.deaths.toLocaleString()}</td>
-                        <td style={{color: "#fff"}}>{c.recovered.toLocaleString()}</td>
+                        <td style={{color: "#65DD9B"}}>{c.confirmed.toLocaleString()}</td>
+                        <td style={{color: "#F65164"}}>{c.deaths.toLocaleString()}</td>
+                        <td style={{color: "#449BE2"}}>{c.recovered.toLocaleString()}</td>
                         <td style={{color: "#fff"}}>{c.active.toLocaleString()}</td>
                     </tr>
                 )
