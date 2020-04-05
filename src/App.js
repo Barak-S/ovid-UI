@@ -32,6 +32,9 @@ function App() {
         <Switch>
           <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/>
         </Switch>
+        <Switch>
+          <Route exact path= "/news" render={(routerProps) => <News {...routerProps}/>}/>
+        </Switch>
   
       </div>
     </Router>

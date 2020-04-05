@@ -63,12 +63,12 @@ export default class CountryStatFinder extends React.Component{
     render(){
 
         return(
-            <div style={{ width: '50%' }}>
-                <div style={{ marginLeft: '7%', paddingTop: 44 }}>
+            <div style={{ width: '100%' }}>
+                <div style={{ marginLeft: '6%', marginRight: '6%', paddingTop: 44 }}>
 
                     <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#e95f5f", fontSize: 16 }} onChange={(e)=>this.handleChange(e)}/>
 
-                    <div style={{ paddingTop:8 }}>
+                    <div style={{ paddingTop:8 }} className="table">
                         <Table striped bordered hover>
                             <thead>
                                 <tr>

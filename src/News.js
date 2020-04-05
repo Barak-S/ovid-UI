@@ -19,14 +19,22 @@ export default class News extends React.Component{
         return(
             this.state.articles.map(a=>{
                 return(
-                    <Card key={a.title} style={{ width: '38rem', marginBottom: 10.5, borderColor: "#e95f5f" }}>
-                        <Card.Img variant="top" src={a.urlToImage} style={{padding:15}} />
+                    // <Card key={a.title} style={{ width: '20rem', marginBottom: 10.5, borderColor: "#e95f5f" }}>
+                    //     <Card.Img variant="top" src={a.urlToImage} style={{padding:15}} />
+                    //     <Card.Body>
+                    //         <Card.Title>{a.title}</Card.Title>
+                    //         <Card.Text>
+                    //             {a.author}
+                    //         </Card.Text>
+                    //         <Card.Link href="#"onClick={()=> window.open(a.url, "_blank")}>{a.url}</Card.Link>
+                    //     </Card.Body>
+                    // </Card>
+
+                    <Card className="newsCard">
+                        <Card.Img variant="top" src={a.urlToImage} style={{ padding:15, marginBottom: 10.5 }} />
                         <Card.Body>
                             <Card.Title>{a.title}</Card.Title>
-                            <Card.Text>
-                                {a.author}
-                            </Card.Text>
-                            <Card.Link href="#"onClick={()=> window.open(a.url, "_blank")}>{a.url}</Card.Link>
+                            <Card.Text>{a.author}</Card.Text>
                         </Card.Body>
                     </Card>
                 )
@@ -39,8 +47,8 @@ export default class News extends React.Component{
     render(){
 
         return(
-            <div style={{width: '50%'}}>
-                <div style={{float: 'right', marginTop:44, marginBottom:44, paddingRight: '8.5%'}}>
+            <div style={{width: '100%'}}>
+                <div style={{ marginTop:44, marginBottom:44 }}>
                     <h3>News</h3>
                     {this.mapArticles()}
                 </div>
