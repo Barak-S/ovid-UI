@@ -15,18 +15,18 @@ export default class Navigator extends React.Component{
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Link to="/" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#e95f5f", fontWeight: "700", fontSize: 15, marginLeft:25}}>HOME</Nav.Link>   
+                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>HOME</Nav.Link>   
                         </Link>
                         <Link to="/news" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#e95f5f", fontWeight: "700", fontSize: 15, marginLeft:25}}>NEWS</Nav.Link>   
+                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>NEWS</Nav.Link>   
                         </Link>
                         <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#e95f5f", fontWeight: "700", fontSize: 15, marginLeft:25}}>CONTACT</Nav.Link>   
+                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>CONTACT</Nav.Link>   
                         </Link>
                         {/* <Link to="/about" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#e95f5f", fontWeight: "700", fontSize: 15, marginLeft:25}}>ABOUT</Nav.Link>   
+                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>ABOUT</Nav.Link>   
                         </Link> */}
-                        <Nav.Link onClick={()=> window.open("https://github.com/Barak-S/Covid-19-UI", "_blank")} style={{color:"#e95f5f", fontWeight: "700", fontSize: 15, marginLeft:25}}>GITHUB</Nav.Link>   
+                        <Nav.Link onClick={()=> window.open("https://github.com/Barak-S/Covid-19-UI", "_blank")} style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>GITHUB</Nav.Link>   
                     </Nav>
                     <div style={{marginRight: "13.5%"}}>
                     <Form inline>
