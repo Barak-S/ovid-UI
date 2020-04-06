@@ -27,23 +27,20 @@ a.nav-link:hover {
 /* tr:nth-child(odd) {
   background-color: white;
 } */
+/* ^^ odd not working */
 
 td{
   background-color: white;
   background-color: rgba(0,0,0,0);
 }
 
-/* ^^ odd not working */
-
 /* tr:nth-child(even) {
   background-color:#F2DEDE;
 } */
 
-
 th {
   background-color: #D47474;
 }
-
 
 .marquee {
   margin: 0 auto;

@@ -30,11 +30,12 @@ export default class CovidData extends React.Component{
                 <div className="marquee">
                     <div>
                         <span>
-                            <strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}
+                            {/* <strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}
                             <strong>Deaths: </strong> {this.state.deaths.toLocaleString()}
                             <strong>Active: </strong> {this.state.active.toLocaleString()}
                             <strong>Recovered: </strong> {this.state.recovered.toLocaleString()}
-                            <strong>Last updated: </strong> {this.state.lastUpdate}
+                            <strong>Last updated: </strong> {this.state.lastUpdate} */}
+                            {`Confirmed: ${this.state.confirmed.toLocaleString()}`+"      "+`Deaths: ${this.state.deaths.toLocaleString()}`+"      "+`Active: ${this.state.active.toLocaleString()}`+"      "+`Recovered: ${this.state.recovered.toLocaleString()}`+"      "+`Last updated: ${this.state.lastUpdate.toLocaleString()}`}
                         </span>
                     </div>
                 </div>
