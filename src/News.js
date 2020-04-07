@@ -74,7 +74,7 @@ export default class News extends React.Component{
                 :
                 <div>
                     <Card className="newsCard" style={{marginBottom: 100}}>
-                    <Button onClick={()=>this.clearSelectedArticle()} style={{backgroundColor: "#e95f5f", color: "#343A40", fontWeight: '600', margin: 10}}>Close</Button>
+                    <Button onClick={()=>this.clearSelectedArticle()} style={{backgroundColor: "#e95f5f", color: "#343A40", fontWeight: '600', margin: 10, borderColor: "#fff"}}>Close</Button>
                         <Card.Img variant="top" src={this.state.selectedArticle.urlToImage} style={{padding:15}} />
                         <Card.Body style={{ color: "#fff" }}>
                             <Card.Title>{this.state.selectedArticle.title}</Card.Title>
