@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
 export default class News extends React.Component{
 
@@ -66,15 +66,15 @@ export default class News extends React.Component{
 
         return(
             <div style={{ width: '100%' }}>
-                <h3 style={{marginTop: 44}}>News</h3>
+                <h3 style={{ marginTop: 44 }}>News</h3>
                 { !this.state.selectedArticle.title ?
-                    <div style={{ marginTop:44, marginBottom:44 }}>
+                    <div style={{ marginTop:10, marginBottom:44 }}>
                         {this.mapArticles()}
                     </div>
                 :
                 <div>
                     <Card className="newsCard" style={{marginBottom: 100}}>
-                    <button onClick={()=>this.clearSelectedArticle()}>Close</button>
+                    <Button onClick={()=>this.clearSelectedArticle()} style={{backgroundColor: "#e95f5f", color: "#343A40", fontWeight: '600', margin: 10}}>Close</Button>
                         <Card.Img variant="top" src={this.state.selectedArticle.urlToImage} style={{padding:15}} />
                         <Card.Body style={{ color: "#fff" }}>
                             <Card.Title>{this.state.selectedArticle.title}</Card.Title>
