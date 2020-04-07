@@ -4,7 +4,8 @@ import { Card } from 'react-bootstrap';
 export default class News extends React.Component{
 
     state={
-        articles: []
+        articles: [],
+        selectedArticle: {}
     }
     
     componentDidMount(){
@@ -13,6 +14,19 @@ export default class News extends React.Component{
         .then(data=>this.setState({
             articles: data.articles
         },()=>console.log(this.state.articles)))
+    }
+
+    handleNewsClick(title){
+        let clickedArticle = this.state.articles.filter(a=>a.title === title)
+        this.setState({
+            selectedArticle: clickedArticle[0]
+        })
+    }
+
+    clearSelectedArticle(){
+        this.setState({
+            selectedArticle: {}
+        })
     }
 
     mapArticles(){
@@ -30,13 +44,12 @@ export default class News extends React.Component{
                     //     </Card.Body>
                     // </Card>
 
-                    <Card className="newsCard">
+                    <Card className="newsCard" key={a.title} onClick={()=>this.handleNewsClick(a.title)}>
                         <Card.Img variant="top" src={a.urlToImage} style={{ padding:15, marginBottom: 10.5 }} />
-                        <Card.Body style={{color: "#fff"}}>
+                        <Card.Body style={{ color: "#fff" }}>
                             <Card.Title>{a.title}</Card.Title>
                             <Card.Text>{a.author}</Card.Text>
-                            <Card.Link href="#"onClick={()=> window.open(a.url, "_blank")}>{a.url}</Card.Link>
-
+                            <Card.Link href="#" onClick={()=> window.open(a.url, "_blank")}>{a.url}</Card.Link>
                         </Card.Body>
                     </Card>
                 )
@@ -48,12 +61,35 @@ export default class News extends React.Component{
 
     render(){
 
+        this.state.selectedArticle.title && console.log(this.state.selectedArticle.content)
+        
+
         return(
-            <div style={{width: '100%'}}>
-                <div style={{ marginTop:44, marginBottom:44 }}>
-                    <h3>News</h3>
-                    {this.mapArticles()}
-                </div>
+            <div style={{ width: '100%' }}>
+                <h3 style={{marginTop: 44}}>News</h3>
+                { !this.state.selectedArticle.title ?
+                    <div style={{ marginTop:44, marginBottom:44 }}>
+                        {this.mapArticles()}
+                    </div>
+                :
+                <div>
+                    <Card className="newsCard" style={{marginBottom: 100}}>
+                    <button onClick={()=>this.clearSelectedArticle()}>Close</button>
+                        <Card.Img variant="top" src={this.state.selectedArticle.urlToImage} style={{padding:15}} />
+                        <Card.Body style={{ color: "#fff" }}>
+                            <Card.Title>{this.state.selectedArticle.title}</Card.Title>
+                            <Card.Text>
+                                {this.state.selectedArticle.author}
+                            </Card.Text>
+                            <Card.Text>
+                                {this.state.selectedArticle.content}
+                            </Card.Text>
+                            <Card.Link href="#"onClick={()=> window.open(this.state.selectedArticle.url, "_blank")}>{this.state.selectedArticle.url}</Card.Link>
+                        </Card.Body>
+                    </Card>
+                </div>}
+
+                {this.state.selectedArticle.title? console.log("yes"): console.log("no")}
             </div>
         )
 
