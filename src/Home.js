@@ -16,7 +16,7 @@ export default class Home extends React.Component{
         .then(resp=>resp.json())
         .then(data=>this.setState({
             articles: data.articles
-        },()=>console.log(this.state.articles)))
+        }))
     }
 
 

@@ -42,6 +42,7 @@ th {
   background-color: #D47474;
 }
 
+
 .marquee {
   margin: 0 auto;
   background-color: black;
@@ -77,11 +78,19 @@ th {
 }
 
 .newsCard{
-  min-width: 80%;
-  margin-left: 8%;
-  margin-right: 8%;
+  min-width: 65%;
+  margin-left: 9%;
+  margin-right: 9%;
   margin-top:15px;
   border-color: #e95f5f;
-  background-color: #343A40;
+}
+
+#dropdown-button-drop-down{
+  color: white;
+  font-weight: bold;
+  background-color: #e95f5f;
+  margin-bottom: 9.5px;
+  border-color: #fff;
+  border-width:1.5;
 }
 
