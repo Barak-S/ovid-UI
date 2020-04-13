@@ -94,3 +94,9 @@ th {
   border-width:1.5;
 }
 
+.progress-bar { 
+  background-color: #449BE2;
+  color: rgb(52,58,64);
+  font-weight: 500;
+}
+

@@ -1,6 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
 import { Form, Container } from 'react-bootstrap';
+import TR from './TableRow'
 
 
 export default class CountryStatFinder extends React.Component{
@@ -32,6 +33,11 @@ export default class CountryStatFinder extends React.Component{
         })
         return[confirmed,deaths,recovered,active]
         // console.log(confirmed,recovered,active,deaths)
+        // take an arg??
+        // 1- function that takes country data and returns an array depending on the tr name.
+        // 2- getWorldStats funtion will map the array returned from the above function 
+        // 3- and return a confirmed,recovered, active and deaths array
+        // 4- when tr's are rendered they will call handleRegionClick() and pass in its tr name [1] when will then call [2]getWorldStats
     }
 
 
@@ -108,13 +114,14 @@ export default class CountryStatFinder extends React.Component{
         return(
             this.state.filteredData.map(c=>{
                 return(
-                    <tr key={c.location} onClick={()=>this.handleCountryClick(c.location)}>
-                        <td style={{color: "#fff"}}>{c.location}</td>
-                        <td style={{color: "#65DD9B"}}>{c.confirmed.toLocaleString()}</td>
-                        <td style={{color: "#F65164"}}>{c.deaths.toLocaleString()}</td>
-                        <td style={{color: "#449BE2"}}>{c.recovered.toLocaleString()}</td>
-                        <td style={{color: "#F8F53F"}}>{c.active.toLocaleString()}</td>
-                    </tr>
+                    // <tr key={c.location} onClick={()=>this.handleCountryClick(c.location)}>
+                    //     <td style={{color: "#fff"}}>{c.location}</td>
+                    //     <td style={{color: "#65DD9B"}}>{c.confirmed.toLocaleString()}</td>
+                    //     <td style={{color: "#F65164"}}>{c.deaths.toLocaleString()}</td>
+                    //     <td style={{color: "#449BE2"}}>{c.recovered.toLocaleString()}</td>
+                    //     <td style={{color: "#F8F53F"}}>{c.active.toLocaleString()}</td>
+                    // </tr>
+                    <TR key={c.location} location={c.location} confirmed={c.confirmed} deaths={c.deaths} recovered={c.recovered} active={c.active}></TR>
                 )
             })
         )
@@ -159,88 +166,52 @@ export default class CountryStatFinder extends React.Component{
                             <tbody>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>World</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
 
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>USA</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Europe</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Asia</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Africa</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Latin America</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>China</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Canada</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Oceana</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>South America</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>North America</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr onClick={(e)=>this.handleRegionClick(e)}>
                                     <td>Middle East</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                             </tbody>
                         </Table> */}
