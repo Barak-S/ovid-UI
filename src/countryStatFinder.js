@@ -114,13 +114,6 @@ export default class CountryStatFinder extends React.Component{
         return(
             this.state.filteredData.map(c=>{
                 return(
-                    // <tr key={c.location} onClick={()=>this.handleCountryClick(c.location)}>
-                    //     <td style={{color: "#fff"}}>{c.location}</td>
-                    //     <td style={{color: "#65DD9B"}}>{c.confirmed.toLocaleString()}</td>
-                    //     <td style={{color: "#F65164"}}>{c.deaths.toLocaleString()}</td>
-                    //     <td style={{color: "#449BE2"}}>{c.recovered.toLocaleString()}</td>
-                    //     <td style={{color: "#F8F53F"}}>{c.active.toLocaleString()}</td>
-                    // </tr>
                     <TR key={c.location} location={c.location} confirmed={c.confirmed} deaths={c.deaths} recovered={c.recovered} active={c.active}></TR>
                 )
             })

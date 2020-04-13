@@ -5,12 +5,12 @@ import { ProgressBar } from 'react-bootstrap';
 export default class TableRow extends React.Component{
 
     state={
-        hover: false
+        hover: true
     }
 
-    // componentDidMount() {
-    //     setTimeout(this.setState({hover: true}), 1000)
-    //   }
+    componentDidMount() {
+        setTimeout(() => { this.setState({ hover: !this.state.hover }) }, 1000)
+    }
 
     render(){
 
