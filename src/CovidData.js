@@ -39,7 +39,7 @@ export default class CovidData extends React.Component{
                         </span>
                     </div>
                 </div> */}
-                <marquee behavior="scroll" style={{color: "#fff", backgroundColor: '#000', }}direction="left">Confirmed:  {this.state.confirmed.toLocaleString()}&nbsp; Deaths: {this.state.deaths.toLocaleString()}&nbsp; Active: {this.state.active.toLocaleString()}&nbsp; Recovered: {this.state.recovered.toLocaleString()}&nbsp; Last updated: {this.state.lastUpdate.toLocaleString()}</marquee>
+                <marquee style={{color: "#fff", backgroundColor: '#000', }}direction="left">Confirmed:  {this.state.confirmed.toLocaleString()}&nbsp; Deaths: {this.state.deaths.toLocaleString()}&nbsp; Active: {this.state.active.toLocaleString()}&nbsp; Recovered: {this.state.recovered.toLocaleString()}&nbsp; Last updated: {this.state.lastUpdate.toLocaleString()}</marquee>
                 
             </div>
         )
