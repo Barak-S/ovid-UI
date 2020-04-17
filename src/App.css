@@ -39,9 +39,8 @@ td{
 } */
 
 th {
-  background-color: #e95f5f;
+  background-color: #E95F5F;
 }
-
 
 .marquee {
   margin: 0 auto;
@@ -59,10 +58,15 @@ th {
   animation: marquee 15s linear infinite;
 }
 
+marquee{
+  margin-top: 18.5px;
+}
+
+
+
 /* .marquee span:hover {
   animation-play-state: paused
 } */
-
 
 @keyframes marquee {
   0% {
@@ -82,13 +86,13 @@ th {
   margin-left: 9%;
   margin-right: 9%;
   margin-top:15px;
-  border-color: #e95f5f;
+  border-color: #F65164;
 }
 
 #dropdown-button-drop-down{
   color: white;
   font-weight: bold;
-  background-color: #e95f5f;
+  background-color: #F65164;
   margin-bottom: 9.5px;
   border-color: #fff;
   border-width:1.5;
