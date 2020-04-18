@@ -62,6 +62,15 @@ marquee{
   margin-top: 18.5px;
 }
 
+/* .marquee{
+  height:20px;
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+
+
+} */
+
 
 
 /* .marquee span:hover {
