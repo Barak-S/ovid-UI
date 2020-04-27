@@ -9,7 +9,7 @@ export default class TableRow extends React.Component{
     }
 
     componentDidMount() {
-        setTimeout(() => { this.setState({ hover: !this.state.hover }) }, 1000)
+        setTimeout(() => { this.setState({ hover: !this.state.hover }) }, 1500)
     }
 
     render(){
