@@ -125,7 +125,7 @@ export default class CountryStatFinder extends React.Component{
         // console.log(this.state.countryData[0])
 
         return(
-            <div style={{ width: '100%' }}>
+            <div style={{ width: '100%', display: "flex" }}>
                 <div style={{ marginLeft: '6%', marginRight: '6%', paddingTop: 44 }}>
 
                     <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#e95f5f", fontSize: 16, backgroundColor: '#343A40', color: '#fff' }} onChange={(e)=>this.handleChange(e)}/>
