@@ -27,6 +27,7 @@ export default class Navigator extends React.Component{
                             <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>ABOUT</Nav.Link>   
                         </Link> */}
                         <Nav.Link onClick={()=> window.open("https://github.com/Barak-S/Covid-19-UI", "_blank")} style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>GITHUB</Nav.Link>   
+                        <Nav.Link onClick={()=> window.open("https://www.linkedin.com/in/baraksaidoff/", "_blank")} style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>LINKEDIN</Nav.Link>   
                     </Nav>
                     <div style={{marginRight: "13.5%"}}>
                     <Form inline>
