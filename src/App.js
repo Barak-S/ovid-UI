@@ -25,9 +25,9 @@ function App() {
         </header>
         <Switch>
             <Route exact path = "/"render={(routerProps)=> <Home {...routerProps}/> }/>
-            <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps}/>}/>
-            <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/>
-            <Route exact path= "/news" render={(routerProps) => <News {...routerProps}/>}/>
+            {/* <Route exact path= "/contact" render={(routerProps) => <Contact {...routerProps}/>}/> */}
+            {/* <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/> */}
+            {/* <Route exact path= "/news" render={(routerProps) => <News {...routerProps}/>}/> */}
         </Switch>
   
       </div>

@@ -60,7 +60,7 @@ th {
 
 marquee{
   margin-top: 18.5px;
-}
+} 
 
 /* .marquee{
   height:20px;
@@ -113,3 +113,7 @@ marquee{
   font-weight: 500;
 }
 
+
+/* .marquee-container, .marquee-wrap  {
+  overflow:hidden;
+} */

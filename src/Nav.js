@@ -17,12 +17,12 @@ export default class Navigator extends React.Component{
                         <Link to="/" style={{ textDecoration: 'none' }}>
                             <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>HOME</Nav.Link>   
                         </Link>
-                        <Link to="/news" style={{ textDecoration: 'none' }}>
+                        {/* <Link to="/news" style={{ textDecoration: 'none' }}>
                             <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>NEWS</Nav.Link>   
-                        </Link>
-                        <Link to="/contact" style={{ textDecoration: 'none' }}>
+                        </Link> */}
+                        {/* <Link to="/contact" style={{ textDecoration: 'none' }}>
                             <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>CONTACT</Nav.Link>   
-                        </Link>
+                        </Link> */}
                         {/* <Link to="/about" style={{ textDecoration: 'none' }}>
                             <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>ABOUT</Nav.Link>   
                         </Link> */}
