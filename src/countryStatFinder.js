@@ -159,7 +159,7 @@ export default class CountryStatFinder extends React.Component{
 
                     <div style={{ paddingTop:8 }} className="table">
                     
-                        <Table striped hover>
+                        <Table striped hover responsive variant="dark">
                             <thead>
                                 <tr>
                                     <th onClick={(e)=>this.sortCountries(e)}>Country</th>
