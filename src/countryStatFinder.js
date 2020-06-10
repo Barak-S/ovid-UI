@@ -129,19 +129,19 @@ export default class CountryStatFinder extends React.Component{
             })
         } else if (value === "Confirmed"){
             this.setState({
-                filteredData: sortedArray.sort((a, b) => a.confirmed > b.confirmed ? 1 : -1)
+                filteredData: sortedArray.sort((a, b) => a.confirmed < b.confirmed ? 1 : -1)
             })
         } else if (value === "Deaths"){
             this.setState({
-                filteredData: sortedArray.sort((a, b) => a.deaths > b.deaths ? 1 : -1)
+                filteredData: sortedArray.sort((a, b) => a.deaths < b.deaths ? 1 : -1)
             })
         } else if (value === "Recovered"){
             this.setState({
-                filteredData: sortedArray.sort((a, b) => a.recovered > b.recovered ? 1 : -1)
+                filteredData: sortedArray.sort((a, b) => a.recovered < b.recovered ? 1 : -1)
             })
         } else if (value === "Active"){
             this.setState({
-                filteredData: sortedArray.sort((a, b) => a.active > b.active ? 1 : -1)
+                filteredData: sortedArray.sort((a, b) => a.active < b.active ? 1 : -1)
             })
         }
         
