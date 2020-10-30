@@ -156,12 +156,12 @@ export default class CountryStatFinder extends React.Component{
                 <div style={{ marginLeft: '6%', marginRight: '6%', paddingTop: 44 }}>
 
                     <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#e95f5f", fontSize: 16, backgroundColor: '#343A40', color: '#fff' }} onChange={(e)=>this.handleChange(e)}/>
-
+                    <hr/>
                     <div style={{ paddingTop:8 }} className="table">
                     
                         <Table striped hover responsive variant="dark">
                             <thead>
-                                <tr>
+                                <tr style={{cursor: "pointer"}}>
                                     <th onClick={(e)=>this.sortCountries(e)}>Country</th>
                                     <th onClick={(e)=>this.sortCountries(e)}>Confirmed</th>
                                     <th onClick={(e)=>this.sortCountries(e)}>Deaths</th>

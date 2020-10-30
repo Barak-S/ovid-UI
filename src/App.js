@@ -6,9 +6,8 @@ import './App.css';
 import CovidData from './CovidData'
 import Nav from './Nav'
 import Contact from './Contact'
-import About from './About'
 import Home from './Home'
-import News from './News'
+import Footer from './Footer'
 
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
             {/* <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/> */}
             {/* <Route exact path= "/news" render={(routerProps) => <News {...routerProps}/>}/> */}
         </Switch>
-  
+        <Footer/>
       </div>
     </Router>
   );

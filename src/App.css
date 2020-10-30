@@ -117,3 +117,9 @@ marquee{
 /* .marquee-container, .marquee-wrap  {
   overflow:hidden;
 } */
+
+#footer{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
