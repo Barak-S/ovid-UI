@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import CovidData from './CovidData'
-import Nav from './Nav'
-import About from './About'
-import Home from './Home'
-import Footer from './Footer'
+import CovidData from './component/CovidData'
+import CountryTable from './containers/countryStatFinder'
+import Nav from './component/Nav'
+import About from './containers/About'
+import Footer from './component/Footer'
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <CovidData></CovidData>
         </header>
         <Switch>
-            <Route exact path = "/"render={(routerProps)=> <Home {...routerProps}/> }/>
+            <Route exact path = "/"render={(routerProps)=> <CountryTable {...routerProps}/> }/>
             <Route exact path= "/about" render={(routerProps) => <About {...routerProps}/>}/>
         </Switch>
         <Footer/>
