@@ -1,6 +1,6 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
-import { Form, Container } from 'react-bootstrap';
+import { Form, Col } from 'react-bootstrap';
 import TR from './TableRow'
 
 
@@ -10,7 +10,6 @@ export default class CountryStatFinder extends React.Component{
         searchTerm: '',
         countryData: [],
         filteredData: [],
-
     }
 
 
@@ -32,12 +31,6 @@ export default class CountryStatFinder extends React.Component{
             deaths += cs.deaths
         })
         return[confirmed,deaths,recovered,active]
-        // console.log(confirmed,recovered,active,deaths)
-        // take an arg??
-        // 1- function that takes country data and returns an array depending on the tr name.
-        // 2- getWorldStats funtion will map the array returned from the above function 
-        // 3- and return a confirmed,recovered, active and deaths array
-        // 4- when tr's are rendered they will call handleRegionClick() and pass in its tr name [1] when will then call [2]getWorldStats
     }
 
 
@@ -152,10 +145,10 @@ export default class CountryStatFinder extends React.Component{
         // console.log(this.state.countryData[0])
 
         return(
-            <div style={{ width: '100%' }}>
-                <div style={{ marginLeft: '6%', marginRight: '6%', paddingTop: 44 }}>
-
-                    <Form.Control placeholder="Search by Country" style={{width: "45%",borderRadius: 40, borderColor: "#e95f5f", fontSize: 16, backgroundColor: '#343A40', color: '#fff' }} onChange={(e)=>this.handleChange(e)}/>
+                <Col xs={12} sm={12} md={9} lg={9} className="table-col" >
+                    <Form inline style={{margin: 15}}>
+                        <Form.Control placeholder="Search by Country" style={{ borderRadius: 40, borderColor: "#e95f5f", fontSize: 16, backgroundColor: '#343A40', color: '#fff' }} onChange={(e)=>this.handleChange(e)}/>
+                    </Form>
                     <hr/>
                     <div style={{ paddingTop:8 }} className="table">
                     
@@ -236,8 +229,7 @@ export default class CountryStatFinder extends React.Component{
                             </tbody>
                         </Table> */}
                     </div>
-                </div>
-            </div>
+            </Col>
         )
     }
 }

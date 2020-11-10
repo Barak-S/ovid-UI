@@ -15,20 +15,11 @@ export default class Navigator extends React.Component{
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="justify-content-center" style={{ flex: 1}}>
-                        {/* <Link to="/" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>HOME</Nav.Link>   
-                        </Link>
-                        <Link to="/news" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>NEWS</Nav.Link>   
-                        </Link> */}
-                        {/* <Link to="/contact" style={{ textDecoration: 'none' }}>
-                            <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>CONTACT</Nav.Link>   
-                        </Link> */}
-                        {/* <Link to="/about" style={{ textDecoration: 'none' }}>
+                        <Link to="/about" style={{ textDecoration: 'none' }}>
                             <Nav.Link href="#link" style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>ABOUT</Nav.Link>   
-                        </Link> */}
-                        <Nav.Link onClick={()=> window.open("https://github.com/Barak-S/Covid-19-UI", "_blank")} style={{color:"#65DD9B", fontWeight: "700", fontSize: 15, marginLeft:25}}>GITHUB</Nav.Link>   
-                        <Nav.Link onClick={()=> window.open("https://www.linkedin.com/in/baraksaidoff/", "_blank")} style={{color:"#449BE2", fontWeight: "700", fontSize: 15, marginLeft:25}}>LINKEDIN</Nav.Link>   
+                        </Link>
+                        <Nav.Link onClick={()=> window.open("https://github.com/Barak-S/Covid-19-UI", "_blank")} style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>GITHUB</Nav.Link>   
+                        <Nav.Link onClick={()=> window.open("https://www.linkedin.com/in/baraksaidoff/", "_blank")} style={{color:"#F65164", fontWeight: "700", fontSize: 15, marginLeft:25}}>LINKEDIN</Nav.Link>   
                     </Nav>
                     <div style={{marginRight: "13.5%"}}>
                     <Form inline>

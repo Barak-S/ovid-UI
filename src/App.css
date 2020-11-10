@@ -15,9 +15,15 @@ body{
 a.nav-link:hover {
   height: 38px;
   background-color: #F65164;
-  color:white;
+  color: black !important;
   border-radius:8px;
   transition: 0.3s;
+}
+
+.table-col{
+  margin: 0 auto;
+  padding: 0px;
+  min-height: 100vh;
 }
 
 .table{
@@ -41,8 +47,6 @@ td{
 th {
   background-color: #E95F5F;
 }
-
-
 
 .contact{
   text-align: left;
@@ -95,13 +99,8 @@ th {
 .marquee span {
   display: inline-block;
   padding-left: 100%;
-  /* show the marquee just outside the paragraph */
   will-change: transform;
   animation: marquee 15s linear infinite;
-}
-
-.marquee span:hover {
-  animation-play-state: paused
 }
 
 
@@ -123,4 +122,11 @@ th {
      */
     padding-left: 0;
   }
+}
+
+.about{
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color:  #F65164;
+  text-align: left;
 }

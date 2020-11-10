@@ -27,32 +27,15 @@ export default class CovidData extends React.Component{
         
         return(
             <div style={{marginTop: 18}}>
-
-            <p class="marquee">
-            <span>
-                {' '}<strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}{' '}
-                {' '}<strong>Deaths: </strong> {this.state.deaths.toLocaleString()}{' '}
-                {' '}<strong>Active: </strong> {this.state.active.toLocaleString()}{' '}
-                {' '}<strong>Recovered: </strong> {this.state.recovered.toLocaleString()}{' '}
-                {' '}<strong>Last updated: </strong> {this.state.lastUpdate.split('-').join("/")}{' '}   
-            </span>
-
-            </p>
-                
-                
-                {/* <div className="marquee">
-                    <div>
-                        <span>
-                            {' '}<strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}{' '}
-                            {' '}<strong>Deaths: </strong> {this.state.deaths.toLocaleString()}{' '}
-                            {' '}<strong>Active: </strong> {this.state.active.toLocaleString()}{' '}
-                            {' '}<strong>Recovered: </strong> {this.state.recovered.toLocaleString()}{' '}
-                            {' '}<strong>Last updated: </strong> {this.state.lastUpdate.split('-').join("/")}{' '}   
-                        </span>
-                    </div>
-                </div> */}
-                {/* <marquee style={{color: "#fff", backgroundColor: '#000', }}direction="left">Confirmed:  {this.state.confirmed.toLocaleString()}&nbsp; Deaths: {this.state.deaths.toLocaleString()}&nbsp; Active: {this.state.active.toLocaleString()}&nbsp; Recovered: {this.state.recovered.toLocaleString()}&nbsp; Last updated: {this.state.lastUpdate.toLocaleString()}</marquee> */}
-                
+                <p class="marquee">
+                <span>
+                    {' '}<strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}{' '}
+                    {' '}<strong>Deaths: </strong> {this.state.deaths.toLocaleString()}{' '}
+                    {' '}<strong>Active: </strong> {this.state.active.toLocaleString()}{' '}
+                    {' '}<strong>Recovered: </strong> {this.state.recovered.toLocaleString()}{' '}
+                    {' '}<strong>Last updated: </strong> {this.state.lastUpdate.split('-').join("/")}{' '}   
+                </span>
+                </p>   
             </div>
             
         )
