@@ -1,11 +1,13 @@
+
 .App {
   min-height: 100vh;
+  letter-spacing: .35px; 
+  line-height: 1.8;
 }
 
 body{
   text-align: center;
-  background: rgb(182,65,65);
-  background: linear-gradient(0deg, rgba(182,65,65,1) 0%, rgb(52,58,64) 100%);
+  background-color: #343A40;
 }
 
 .main-navigation {
@@ -30,43 +32,13 @@ a.nav-link:hover {
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 }
 
-/* tr:nth-child(odd) {
-  background-color: white;
-} */
-/* ^^ odd not working */
-
 td{
   background-color: white;
   background-color: rgba(0,0,0,0);
 }
 
-/* tr:nth-child(even) {
-  background-color:#F2DEDE;
-} */
-
 th {
-  background-color: #E95F5F;
-}
-
-.contact{
-  text-align: left;
-}
-
-.newsCard{
-  min-width: 65%;
-  margin-left: 9%;
-  margin-right: 9%;
-  margin-top:15px;
-  border-color: #F65164;
-}
-
-#dropdown-button-drop-down{
-  color: white;
-  font-weight: bold;
-  background-color: #F65164;
-  margin-bottom: 9.5px;
-  border-color: #fff;
-  border-width:1.5;
+  background-color: #f65159b2;
 }
 
 .progress-bar { 
@@ -75,53 +47,10 @@ th {
   font-weight: 500;
 }
 
-
-/* .marquee-container, .marquee-wrap  {
-  overflow:hidden;
-} */
-
 #footer{
   left: 0;
   bottom: 0;
   width: 100%;
-}
-
-.marquee {
-  width: 100%;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: border-box;
-  background-color: black;
-  color: #fff;
-}
-
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  will-change: transform;
-  animation: marquee 15s linear infinite;
-}
-
-
-@keyframes marquee {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee { 
-    white-space: normal 
-  }
-  .marquee span {
-    animation-iteration-count: 1;
-    animation-duration: 0.01; 
-    /* instead of animation: none, so an animationend event is 
-     * still available, if previously attached.
-     */
-    padding-left: 0;
-  }
 }
 
 .about{
@@ -130,3 +59,4 @@ th {
   color:  #F65164;
   text-align: left;
 }
+

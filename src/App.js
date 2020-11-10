@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CovidData from './CovidData'
@@ -11,9 +10,6 @@ import Footer from './Footer'
 
 
 function App() {
-
-  // const [countryName, setCountryName] = useState('us')
-
   
   return (
     <Router>

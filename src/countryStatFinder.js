@@ -3,7 +3,6 @@ import Table from 'react-bootstrap/Table';
 import { Form, Col } from 'react-bootstrap';
 import TR from './TableRow'
 
-
 export default class CountryStatFinder extends React.Component{
 
     state={
@@ -19,69 +18,8 @@ export default class CountryStatFinder extends React.Component{
         },()=>this.filterCountries())
     }
 
-    getWorldStatistics(){
-        let confirmed=0
-        let recovered=0
-        let active=0
-        let deaths=0
-        this.state.countryData.map(cs=>{
-            confirmed += cs.confirmed
-            recovered += cs.recovered
-            active += cs.active
-            deaths += cs.deaths
-        })
-        return[confirmed,deaths,recovered,active]
-    }
-
-
     handleCountryClick(e){
         console.log(e)
-    }
-
-
-    handleRegionClick(e){
-        // console.log(e.target.parentNode.children[0])
-        let region = e.target.parentNode.children[0].innerHTML
-        switch(region){
-            case "USA":
-                console.log("us")
-                break;
-            case "World":
-                console.log("world")
-                break;
-            case "Europe":
-                console.log("europe")
-                break;
-            case "Asia":
-                console.log("asia")
-                break;
-            case "Africa":
-                console.log("africa")
-                break;
-            case "Latin America":
-                console.log("La")
-                break;
-            case "China":
-                console.log("china")
-                break;
-            case "Canada":
-                console.log("Canada")
-                break;
-            case "Oceana":
-                console.log("Oceana")
-                break;
-            case "South America":
-                console.log("South America")
-                break;
-            case "North America":
-                console.log("North America")
-                break;
-            case "Middle East":
-                console.log("Middle East")
-                break;
-                default:
-        }
-
     }
 
     componentDidMount(){
@@ -90,11 +28,8 @@ export default class CountryStatFinder extends React.Component{
         .then(data=>this.setState({
             countryData: data.data,
             filteredData: data.data
-        },()=>this.getWorldStatistics()))
-
-        // .then(fetch(`https://covid2019-api.herokuapp.com/v2/total`).then(resp=>resp.json()).then(data=>console.log(data)))
+        }))
     }
-    // ^^ 2 fetches in componentDidMount to https://covid2019-api.herokuapp.com/v2/total and create total box
 
     
     filterCountries(){
@@ -142,8 +77,6 @@ export default class CountryStatFinder extends React.Component{
 
     render(){
 
-        // console.log(this.state.countryData[0])
-
         return(
                 <Col xs={12} sm={12} md={9} lg={9} className="table-col" >
                     <Form inline style={{margin: 15}}>
@@ -166,68 +99,6 @@ export default class CountryStatFinder extends React.Component{
                                 {this.mapCountries()}
                             </tbody>
                         </Table>
-                        {/* <Table striped hover>
-                            <thead>
-                                <tr>
-                                    <th>Region</th>
-                                    <th>Confirmed</th>
-                                    <th>Deaths</th>
-                                    <th>Recovered</th>
-                                    <th>Active</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>World</td>
-                                    
-                                </tr>
-
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>USA</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Europe</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Asia</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Africa</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Latin America</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>China</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Canada</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Oceana</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>South America</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>North America</td>
-                                    
-                                </tr>
-                                <tr onClick={(e)=>this.handleRegionClick(e)}>
-                                    <td>Middle East</td>
-                                    
-                                </tr>
-                            </tbody>
-                        </Table> */}
                     </div>
             </Col>
         )

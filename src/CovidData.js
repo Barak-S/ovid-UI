@@ -23,11 +23,10 @@ export default class CovidData extends React.Component{
     }
     
     render(){
-
         
         return(
             <div style={{marginTop: 18}}>
-                <p class="marquee">
+                {/* <p class="marquee">
                 <span>
                     {' '}<strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}{' '}
                     {' '}<strong>Deaths: </strong> {this.state.deaths.toLocaleString()}{' '}
@@ -35,7 +34,16 @@ export default class CovidData extends React.Component{
                     {' '}<strong>Recovered: </strong> {this.state.recovered.toLocaleString()}{' '}
                     {' '}<strong>Last updated: </strong> {this.state.lastUpdate.split('-').join("/")}{' '}   
                 </span>
-                </p>   
+                </p>    */}
+                <marquee scrollamount="12" style={{ color: 'white', backgroundColor: "black", fontSize: '1rem' }}>
+                    <span>
+                    {' '}<strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}{' '}
+                    {' '}<strong>Deaths: </strong> {this.state.deaths.toLocaleString()}{' '}
+                    {' '}<strong>Active: </strong> {this.state.active.toLocaleString()}{' '}
+                    {' '}<strong>Recovered: </strong> {this.state.recovered.toLocaleString()}{' '}
+                    {' '}<strong>Last updated: </strong> {this.state.lastUpdate.split('-').join("/")}{' '}   
+                    </span>
+                </marquee>
             </div>
             
         )

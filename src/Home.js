@@ -1,9 +1,7 @@
 import React from 'react'
 import CountryStatFinder from './countryStatFinder'
-import News from './News'
 import { Row } from 'react-bootstrap';
 import './App.css';
-
 
 export default class Home extends React.Component{
 
@@ -24,7 +22,7 @@ export default class Home extends React.Component{
         return(
             <Row>
                 <CountryStatFinder></CountryStatFinder>
-                {/* <News></News> */}
+
             </Row>
         )
 
