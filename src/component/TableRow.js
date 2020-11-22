@@ -26,7 +26,7 @@ export default class TableRow extends React.Component{
             <tr>
                 <td style={{color: "#fff"}}>{this.props.location}</td>
                 <td style={{color: "#65DD9B"}}>{this.props.confirmed.toLocaleString()}</td>
-                <td style={{color: "#F65164"}} onMouseEnter={()=>this.setState({hoverDeaths: true})} onMouseLeave={()=>this.setState({hoverDeaths: false})}>{!this.state.hoverDeaths? this.props.deaths.toLocaleString(): progressDeaths}</td>
+                <td style={{color: "#ED5145"}} onMouseEnter={()=>this.setState({hoverDeaths: true})} onMouseLeave={()=>this.setState({hoverDeaths: false})}>{!this.state.hoverDeaths? this.props.deaths.toLocaleString(): progressDeaths}</td>
                 <td style={{color: "#449BE2"}} onMouseEnter={()=>this.setState({hoverRecovered: true})} onMouseLeave={()=>this.setState({hoverRecovered: false})}>{!this.state.hoverRecovered? this.props.recovered.toLocaleString(): progressRecovered}</td>
                 <td style={{color: "#F8F53F"}}>{this.props.active.toLocaleString()}</td>
              </tr>

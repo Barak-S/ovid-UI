@@ -39,8 +39,8 @@ export default class CovidData extends React.Component{
                     <span>
                     {' '}<strong>Confirmed: </strong> {this.state.confirmed.toLocaleString()}{' '}
                     {' '}<strong>Deaths: </strong> {this.state.deaths.toLocaleString()}{' '}
-                    {' '}<strong>Active: </strong> {this.state.active.toLocaleString()}{' '}
                     {' '}<strong>Recovered: </strong> {this.state.recovered.toLocaleString()}{' '}
+                    {' '}<strong>Active: </strong> {this.state.active.toLocaleString()}{' '}
                     {' '}<strong>Last updated: </strong> {this.state.lastUpdate.split('-').join("/")}{' '}   
                     </span>
                 </marquee>
@@ -49,3 +49,5 @@ export default class CovidData extends React.Component{
         )
     }
 }
+
+

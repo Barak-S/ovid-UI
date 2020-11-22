@@ -16,7 +16,7 @@ body{
 
 a.nav-link:hover {
   height: 38px;
-  background-color: #F65164;
+  background-color: #ED5145;
   color: black !important;
   border-radius:8px;
   transition: 0.3s;
@@ -28,8 +28,11 @@ a.nav-link:hover {
   min-height: 100vh;
 }
 
+
 .table{
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+  height: 85vh;
+  overflow-y: scroll;
 }
 
 td{
@@ -38,7 +41,7 @@ td{
 }
 
 th {
-  background-color: #f65159b2;
+  background-color: #ED5145;
 }
 
 .progress-bar { 
@@ -56,7 +59,7 @@ th {
 .about{
   margin: 0 auto;
   font-size: 1.25rem;
-  color:  #F65164;
+  color:  #ED5145;
   text-align: left;
 }
 
