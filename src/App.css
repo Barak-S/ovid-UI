@@ -24,7 +24,7 @@ a.nav-link:hover {
 
 .table-col{
   margin: 0 auto;
-  padding: 0px;
+  padding: 0rem 1rem;
   min-height: 100vh;
 }
 
